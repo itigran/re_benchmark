@@ -31,3 +31,14 @@ Running
 
 Results
 ==
+
+Using callgraph it is possible to dive into the performance of variaous RE implementations.
+In order to see performance data run the following taget:
+`make callgraph`
+
+This will generate a callgrind.out.XXXX file. Using kcachegrind it is possible to see detailed view of all the calls
+and time associated with each.
+
+Example:
+![alt text](https://raw.githubusercontent.com/itigran/re_benchmark/master/doc/callgraph.png?token=ABISCNODJO5PLILXN4DERXK42T6AW "Callgraph")
+
