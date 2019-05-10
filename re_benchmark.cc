@@ -347,6 +347,8 @@ int main(int argc, char **argv)
     }
     regexs = (const char **)read_file(regex_file);
     texts = (const char **)read_file(text_file);
+    free((void*)regex_file);
+    free((void*)text_file);
     size_t r = 0;
     size_t l = 0;
     for(r=0;regexs[r];r++);
@@ -394,5 +396,9 @@ int main(int argc, char **argv)
             run_re2_tests(test_count,regexs,texts);
         TOCK(RE2);
     }
+    free((void*)regexs[0]);
+    free((void*)regexs);
+    free((void*)texts[0]);
+    free((void*)texts);
 }
 
