@@ -49,7 +49,7 @@ Example:
 Memory Leaks
 =
 In order to investigate memory leaks run 
-'''make memleaks'''
+```make memleaks```
 This will run the program through valgrind and produce memory leak report similar to this:
 >       ==18296== Memcheck, a memory error detector
 >       ==18296== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
